@@ -1,0 +1,57 @@
+:root {
+    --bg-body: #f7f7f7;
+    --bg-surface: #ffffff;
+    --text-primary: #000000;
+    --text-secondary: #555555;
+    --border-color: #000000;
+    --action-bg: #000000;
+    --action-text: #ffffff;
+    --action-hover: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, sans-serif;
+}
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+.btn-primary {
+    background: var(--action-bg);
+    color: var(--action-text);
+    border: 2px solid var(--border-color);
+    padding: 10px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary:hover {
+    background: var(--action-hover);
+    box-shadow: 4px 4px 0px var(--border-color);
+}
+
+.btn-secondary {
+    background: var(--bg-surface);
+    color: var(--text-primary);
+    border: 2px solid var(--border-color);
+    padding: 10px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.btn-secondary:hover {
+    background: #eeeeee;
+}
