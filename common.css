@@ -1,57 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
 :root {
-    --bg-body: #f7f7f7;
+    --bg-body: #f4f3f0;
     --bg-surface: #ffffff;
-    --text-primary: #000000;
-    --text-secondary: #555555;
-    --border-color: #000000;
-    --action-bg: #000000;
+    --text-primary: #1a1a1a;
+    --text-secondary: #6b6b6b;
+    --border-color: #d8d5cf;
+    --border-strong: #b0aca3;
+    --action-bg: #1a1a1a;
     --action-text: #ffffff;
     --action-hover: #333333;
+    --accent: #2d6a4f;
+    --accent-light: #e8f4ed;
+    --danger: #c0392b;
+    --radius: 4px;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', -apple-system, sans-serif;
 }
 
 body {
     background-color: var(--bg-body);
     color: var(--text-primary);
-    line-height: 1.5;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 }
 
 .btn-primary {
     background: var(--action-bg);
     color: var(--action-text);
-    border: 2px solid var(--border-color);
-    padding: 10px 20px;
-    font-weight: 600;
+    border: 1px solid var(--action-bg);
+    padding: 8px 18px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
     cursor: pointer;
-    transition: all 0.2s ease;
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    letter-spacing: 0.5px;
+    border-radius: var(--radius);
+    transition: background 0.15s ease, opacity 0.15s ease;
+    letter-spacing: 0.2px;
 }
 
 .btn-primary:hover {
     background: var(--action-hover);
-    box-shadow: 4px 4px 0px var(--border-color);
+    border-color: var(--action-hover);
 }
 
 .btn-secondary {
     background: var(--bg-surface);
     color: var(--text-primary);
-    border: 2px solid var(--border-color);
-    padding: 10px 20px;
-    font-weight: 600;
+    border: 1px solid var(--border-color);
+    padding: 8px 18px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
     cursor: pointer;
-    transition: all 0.2s ease;
-    text-transform: uppercase;
-    font-size: 0.85rem;
+    border-radius: var(--radius);
+    transition: border-color 0.15s ease, background 0.15s ease;
 }
 
 .btn-secondary:hover {
-    background: #eeeeee;
+    border-color: var(--border-strong);
+    background: #fafaf8;
 }

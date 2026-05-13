@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('movData').valueAsDate = new Date();
 });
 
-// ── Carregamento ────────────────────────────────────────────────────────────
+
 
 async function carregarDados() {
     const [produtos, movimentacoes] = await Promise.all([
@@ -21,7 +21,6 @@ async function carregarDados() {
     preencherSelectProdutos(produtos);
 }
 
-// ── Alertas ─────────────────────────────────────────────────────────────────
 
 function renderizarAlertas(produtos) {
     const alertBox = document.getElementById('alertBox');
@@ -39,7 +38,6 @@ function renderizarAlertas(produtos) {
         .join('');
 }
 
-// ── Tabela de Status (Bubble Sort alfabético) ────────────────────────────────
 
 function bubbleSortAlfabetico(arr) {
     const lista = [...arr];
@@ -75,7 +73,6 @@ function renderizarStatusProdutos(produtos) {
     }).join('');
 }
 
-// ── Histórico ────────────────────────────────────────────────────────────────
 
 function renderizarHistorico(movimentacoes) {
     const tbody = document.getElementById('tabelaHistorico');
@@ -99,7 +96,6 @@ function renderizarHistorico(movimentacoes) {
     }).join('');
 }
 
-// ── Select de Produtos no Modal ───────────────────────────────────────────────
 
 function preencherSelectProdutos(produtos) {
     const select = document.getElementById('movProduto');
@@ -108,7 +104,6 @@ function preencherSelectProdutos(produtos) {
         ordenados.map(p => `<option value="${p.id}">${p.nome}</option>`).join('');
 }
 
-// ── Modal ────────────────────────────────────────────────────────────────────
 
 function abrirModalMovimentacao() {
     form.reset();
@@ -124,7 +119,6 @@ window.onclick = (e) => {
     if (e.target === modal) fecharModal();
 };
 
-// ── Submit ───────────────────────────────────────────────────────────────────
 
 form.onsubmit = async (e) => {
     e.preventDefault();
